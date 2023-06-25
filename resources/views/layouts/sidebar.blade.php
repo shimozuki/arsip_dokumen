@@ -10,11 +10,20 @@
         <li><a class="nav-link" href="/dashboard"><i class="fas fa-tachometer-alt"></i> <span>Home</span></a></li>
       </li>
       @if (auth()->user()->role == 2)
+      <li class="menu-header">Informasi Desa</li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-import"></i><span>Informasi Desa</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="/serahTerima">Program Tahunan</a></li>
+            <li><a class="nav-link" href="/serahTerima/create">Penerima Bantuan</a></li>
+          </ul>
+        </li>
+      </li>
       <li class="menu-header">Dokumen</li>
         <li class="nav-item dropdown">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-import"></i><span>Serah Terima</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="/serahTerima">List Data</a></li>
+            <li><a class="nav-link" href="/serahTerima">My Data</a></li>
             <li><a class="nav-link" href="/serahTerima/create">Tambah Data</a></li>
           </ul>
         </li>
@@ -32,7 +41,7 @@
         </li>
       </li>
       @endif
-      @if (auth()->user()->role == 2)
+      @if (auth()->user()->role == 1)
         <li class="menu-header">Jenis Dokumen</li>
             <li><a class="nav-link" href="/jenisDokumen"><i class="far fa-file-code"></i><span>Jenis Dokumen</span></a></li>
         </li>
@@ -57,11 +66,7 @@
           <li><a class="nav-link" href="/perusahaan"><i class="fas fa-folder-open"></i><span>List Dusun</span></a></li>
       </li>
       @endif
-      @if (auth()->user()->role == 2)
-        <li class="menu-header">Batch</li>
-          <li><a class="nav-link" href="/batch"><i class="fas fa-file-alt"></i> <span>List Batch</span></a></li>
-        </li>
-      @endif
+    
     </ul>
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
