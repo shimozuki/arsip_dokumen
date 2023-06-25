@@ -38,7 +38,7 @@
         </li>
       @endif
       @if (auth()->user()->role == 1)
-        <li class="menu-header">Pengajuan Dokumen</li>
+        <li class="menu-header">Peminjaman Dokumen</li>
             <li><a class="nav-link" href="/peminjaman"><i class="far fa-file-code"></i><span>Data Peengajuan</span></a></li>
         </li>
       @endif

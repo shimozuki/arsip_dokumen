@@ -12,7 +12,7 @@
       <div class="row mb-2">
         <div class="col-sm-2">
           <div class="Batch">
-            <label>Bulan Pengajuan</label>
+            <label>Bulan Pinjam</label>
             <div class="form-group">
               <select name="bulan" class="form-control select2 filterPeminjaman" id="monthPinjam">
                 <option value="">Pilih Bulan</option>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-sm-2">
           <div class="Batch">
-            <label>Tahun Pengajuan</label>
+            <label>Tahun Pinjam</label>
             <div class="form-group">
               <input type="text" name="tahun" id="yearPinjam" class="form-control filterPeminjaman">
             </div>
@@ -46,8 +46,8 @@
             <div class="form-group">
               <select name="bulan" class="form-control select2 filterPeminjaman" id="statusPinjam">
                 <option value="">Pilih Status</option>
-                <option value="1">Diterima</option>
-                <option value="0">Belum Di terima</option>
+                <option value="1">Dikembalikan</option>
+                <option value="0">Dipinjam</option>
               </select>
             </div>
           </div>
@@ -63,11 +63,12 @@
       <table class="table table-striped data" id="peminjaman">
         <thead>
           <tr>
-            <th scope="col">Nama Pengajuan</th>
+            <th scope="col">Nama Peminjam</th>
             <th scope="col">Nomor ND</th>
             <th scope="col">Tanggal ND</th>
             <th scope="col">Nomor Dokumen</th>
-            <th scope="col">Tanggal Diterima</th>
+            <th scope="col">Tanggal Pinjam</th>
+            <th scope="col">Tanggal Kembali</th>
             <th scope="col">Seksi</th>
             <th scope="col">Status</th>
             {{-- <th scope="col">Action</th> --}}
@@ -103,7 +104,7 @@
                     <input type="date" name="tanggalND" class="form-control" id="tanggalND">
                   </div>
                   <div class="form-group mr-2">
-                    <label>Nama Pemilik</label>
+                    <label>Nama Peminjam</label>
                     <input type="text" name="nama" class="form-control" id="nama">
                   </div>
                   <div class="form-group mr-2">
@@ -250,7 +251,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><?= $p->nama_perusahaan ?></td>
+              <td><?= $p->nama_Dusun ?></td>
               <td><?= $p->tanggal_dokumen ?></td>
             </tr>
           </tbody>
