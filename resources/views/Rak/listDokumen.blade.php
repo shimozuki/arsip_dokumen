@@ -29,7 +29,7 @@
                   <th scope="col">Rak</th>
                   <th scope="col">Box</th>
                   <th scope="col">Batch</th>
-                  <th scope="col">Nama Perusahaan</th>
+                  <th scope="col">Nama Dusun</th>
                   <th scope="col">Tanggal Dokumen</th>
                   <th scope="col">Jenis Dokumen</th>
                   <th scope="col">Tahun</th>

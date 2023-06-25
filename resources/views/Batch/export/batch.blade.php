@@ -27,7 +27,7 @@
                 <th>No</th>
                 <th>Nomor</th>
                 <th>Tanggal</th>
-                <th>Nama Perusahaan</th>
+                <th>Nama Dusun</th>
                 <th>Ket (Batch)</th>
             </tr>  
         </thead>

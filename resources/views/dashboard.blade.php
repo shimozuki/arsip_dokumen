@@ -56,7 +56,7 @@
         </div>
         <div class="card-wrap">
             <div class="card-header">
-            <h4>Total Dokumen Dipinjam</h4>
+            <h4>Total Pengajuan</h4>
             </div>
             <div class="card-body">
             {{$totalPinjam}}

@@ -224,7 +224,7 @@ const tableKarung = $('#karung').DataTable({
               <thead>
                 <tr>
                   <th scope="col">Nomor Dokumen</th>
-                  <th scope="col">Nama Perusahaan</th>
+                  <th scope="col">Nama Dusun</th>
                   <th scope="col">Jenis Dokumen</th>
                   <th scope="col">Tanggal Dokumen</th>
                 </tr>

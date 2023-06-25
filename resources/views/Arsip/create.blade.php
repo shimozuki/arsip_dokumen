@@ -45,7 +45,7 @@
                     <tr>
                       <th>No.</th>
                       <th>Nomor Dokumen</th>
-                      <th>Nama Perusahaan</th>
+                      <th>Nama Dusun</th>
                       <th>Jenis Dokumen</th>
                       <th>Tanggal Dokumen</th>
                       <th>Action</th>

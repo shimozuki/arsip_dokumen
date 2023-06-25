@@ -149,7 +149,7 @@
               <th scope="col">Batch</th>
               <th scope="col">Jenis Dokumen</th>
               <th scope="col">Nomor Pendaftaran</th>
-              <th scope="col">Nama Perusahaan</th>
+              <th scope="col">Nama Dusun</th>
               <th scope="col">Tanggal Dokumen</th>
               <th scope="col">Status Dokumen</th>
               <th scope="col">Aksi</th>

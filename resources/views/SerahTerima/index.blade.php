@@ -83,7 +83,7 @@
           <tr>
             <th scope="col">Batch</th>
             <th scope="col">Jenis Dokumen</th>
-            <th scope="col">Nama Perusahaan</th>
+            <th scope="col">Nama Dusun</th>
             <th scope="col">Tanggal Dokumen</th>
             <th scope="col">Nomor Dokumen</th>
             <th scope="col">Action</th>
@@ -115,7 +115,7 @@
                 <input type="text" class="form-control" value="<?= $sr->batch ?>" name="batch">
               </div>
               <div class="form-group">
-                <label for="message-text" class="col-form-label">Nama Perusahaan:</label>
+                <label for="message-text" class="col-form-label">Nama Dusun:</label>
                 <input type="text" name="namaPT" value="<?= $sr->nama_perusahaan ?>" class="form-control">
               </div>
               <div class="form-group">

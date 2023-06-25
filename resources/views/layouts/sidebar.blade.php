@@ -38,13 +38,8 @@
         </li>
       @endif
       @if (auth()->user()->role == 1)
-        <li class="menu-header">Non Display</li>
-            <li><a class="nav-link" href="{{ route('karung.index') }}"><i class="fas fa-box-open"></i><span>Data Karung</span></a></li>
-        </li>
-      @endif
-      @if (auth()->user()->role == 1)
-        <li class="menu-header">Peminjaman Dokumen</li>
-            <li><a class="nav-link" href="/peminjaman"><i class="far fa-file-code"></i><span>Data Peminjaman</span></a></li>
+        <li class="menu-header">Pengajuan Dokumen</li>
+            <li><a class="nav-link" href="/peminjaman"><i class="far fa-file-code"></i><span>Data Peengajuan</span></a></li>
         </li>
       @endif
       @if (auth()->user()->role == 0)
@@ -57,9 +52,11 @@
             <li><a class="nav-link" href="/rak"><i class="fas fa-archive"></i><span>Data Rak</span></a></li>
         </li>
       @endif
-      <li class="menu-header">Perusahaan</li>
-          <li><a class="nav-link" href="/perusahaan"><i class="fas fa-folder-open"></i><span>List Perusahaan</span></a></li>
+      @if (auth()->user()->role == 1)
+      <li class="menu-header">Dusun</li>
+          <li><a class="nav-link" href="/perusahaan"><i class="fas fa-folder-open"></i><span>List Dusun</span></a></li>
       </li>
+      @endif
       @if (auth()->user()->role == 2)
         <li class="menu-header">Batch</li>
           <li><a class="nav-link" href="/batch"><i class="fas fa-file-alt"></i> <span>List Batch</span></a></li>

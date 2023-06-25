@@ -15,7 +15,7 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Nama Perusahaan</th>
+            <th scope="col">Nama Dusun</th>
             {{-- <th scope="col">No Pendaftaran</th> --}}
             <th scope="col">Action</th>
           </tr>

@@ -35,7 +35,7 @@
               <table class="table table-striped table-md">
                 <tr>
                   <th>#</th>
-                  <th>Nama Perusahaan</th>
+                  <th>Nama Dusun</th>
                   <th>Nomor Dokumen</th>
                   <th>Jenis Dokumen</th>
                   <th>Tanggal Dokumen</th>
@@ -46,7 +46,7 @@
                     <td>1</td>
                     <td>
                       <select class="form-control select2" name="nama_pt[]">
-                        <option>-- Nama Perusahaan --</option>
+                        <option>-- Nama Dusun --</option>
                         @foreach ($perusahaan as $pt)
                             <option value="<?= $pt ?>"><?= $pt ?></option>
                         @endforeach

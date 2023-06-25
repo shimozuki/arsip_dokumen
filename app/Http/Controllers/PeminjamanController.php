@@ -54,6 +54,7 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
+        
         foreach ($request->noDok as $key => $noPen) {
             $data = new Peminjaman();
             $data->no_pen = $noPen;
@@ -63,9 +64,7 @@ class PeminjamanController extends Controller
             $data->tanggal_pinjam = $request->newTanggal[$key];
             $data->no_nd = $request->newNoND[$key];
             $data->tanggal_nd = $request->newTanggalND[$key];
-            $data->created_by = auth()->user()->username;
             $data->save();
-
             DataArsip::where('id_dok', $request->newID[$key])->update(['status' => 2]);
         }
         alert()->success('Success!', 'Data Berhasil Ditambahkan!')->autoclose(3500);

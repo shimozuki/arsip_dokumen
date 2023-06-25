@@ -458,7 +458,7 @@ $(document).ready(function(){
       <td>${count}</td>
       <td>
         <select class="form-control select2" name="nama_pt[]">
-          <option>-- Nama Perusahaan --</option>
+          <option>-- Nama Dusun --</option>
             ${PT}
         </select>
       </td>
