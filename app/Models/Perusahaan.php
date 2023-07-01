@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Perusahaan extends Model
 {
     use HasFactory;
-    protected $table = "perusahaan";
-    protected $primaryKey = 'id_perusahaan';
+    protected $table = "dusun";
+    protected $primaryKey = 'id_dusun';
     protected $fillable = [
-        'no_pen', 'nama_perusahaan'
+        'no_pen', 'nama_dusun'
     ];
 }

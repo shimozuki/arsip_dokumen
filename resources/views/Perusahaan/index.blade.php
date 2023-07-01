@@ -1,6 +1,6 @@
 @extends('layouts/app2')
-@section('title','Data Perusahaan')
-@section('judul','List Perusahaan')
+@section('title','Data Dusun')
+@section('judul','List Dusun')
 @section('content')
 <div class="card">
     <div class="card-header">
@@ -25,10 +25,10 @@
           @foreach ($perusahaan as $pt)
               <tr>
                 <td>{{$no++}}</td>
-                <td>{{$pt->nama_perusahaan}}</td>
+                <td>{{$pt->nama_dusun}}</td>
                 <td>
-                  <button class="btn btn-primary" data-toggle="modal" data-target="#editPT{{$pt->id_perusahaan}}">Edit</button>
-                  <button class="btn btn-danger" data-toggle="modal" data-target="#hapusPT{{$pt->id_perusahaan}}">Delete</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#editPT{{$pt->id_dusun}}">Edit</button>
+                  <button class="btn btn-danger" data-toggle="modal" data-target="#hapusPT{{$pt->id_dusun}}">Delete</button>
                 </td>
               </tr>
           @endforeach
@@ -70,7 +70,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Tambah Data Perusahaan</h5>
+      <h5 class="modal-title" id="exampleModalLabel">Tambah Data Dusun</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -95,22 +95,22 @@
 
 @foreach ($perusahaan as $pt)
 <!-- Modal Edit PT -->
-<div class="modal fade" id="editPT{{$pt->id_perusahaan}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editPT{{$pt->id_dusun}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLabel">Edit {{$pt->nama_perusahaan}}</h5>
+      <h5 class="modal-title" id="exampleModalLabel">Edit {{$pt->nama_dusun}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="{{ route('perusahaan.update', $pt->id_perusahaan) }}" method="post" enctype="multipart/form-data">
+      <form action="{{ route('perusahaan.update', $pt->id_dusun) }}" method="post" enctype="multipart/form-data">
         <div class="modal-body">
             @csrf
             @method('PUT');
             <label>Entry Data Baru</label>
             <div class="form-group">
-            <input type="text" placeholder="{{$pt->nama_perusahaan}}" name="namaPT" class="form-control">
+            <input type="text" placeholder="{{$pt->nama_dusun}}" name="namaPT" class="form-control">
             </div>
           </div>
           <div class="modal-footer">
@@ -125,16 +125,16 @@
 
 @foreach ($perusahaan as $pt)
   <!-- Modal Hapus-->
-  <div class="modal fade" id="hapusPT{{$pt->id_perusahaan}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="hapusPT{{$pt->id_dusun}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Hapus Perusahaan {{$pt->nama_perusahaan}}</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Hapus Perusahaan {{$pt->nama_dusun}}</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="{{route('perusahaan.destroy', $pt->id_perusahaan)}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('perusahaan.destroy', $pt->id_dusun)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('DELETE')
           <div class="modal-body">

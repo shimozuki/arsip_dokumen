@@ -17,7 +17,7 @@ class PerusahaanController extends Controller
     // data perusahaan 
     function index()
     {
-        $perusahaan = DB::table('perusahaan')->distinct()->get();
+        $perusahaan = DB::table('dusun')->distinct()->get();
         return view('Perusahaan.index', compact('perusahaan'));
     }
 
@@ -26,15 +26,15 @@ class PerusahaanController extends Controller
         $search = $request->search;
 
         if ($search == '') {
-            $pt = Perusahaan::orderby('nama_perusahaan', 'asc')->select('nama_perusahaan')->limit(5)->get();
+            $pt = Perusahaan::orderby('nama_dusun', 'asc')->select('nama_dusun')->limit(5)->get();
         } else {
-            $pt = Perusahaan::orderby('nama_perusahaan', 'asc')->select('nama_perusahaan')->where('nama_perusahaan', 'like', '%' . $search . '%')->limit(5)->get();
+            $pt = Perusahaan::orderby('nama_dusun', 'asc')->select('nama_dusun')->where('nama_dusun', 'like', '%' . $search . '%')->limit(5)->get();
         }
 
         $response = array();
         foreach ($pt as $p) {
             $response[] = array(
-                "text" => $p->nama_perusahaan
+                "text" => $p->nama_dusun
             );
         }
 
@@ -49,7 +49,7 @@ class PerusahaanController extends Controller
         ]);
 
         Perusahaan::create([
-            'nama_perusahaan' => $request->namaPT,
+            'nama_dusun' => $request->namaPT,
         ]);
         alert()->success('Success!', 'Data Berhasil Ditambahkan!')->autoclose(3500);
         return redirect('perusahaan');
@@ -84,7 +84,7 @@ class PerusahaanController extends Controller
 
         $perusahaan = Perusahaan::findOrFail($id);
         $perusahaan->update([
-            'nama_perusahaan' => $request->namaPT,
+            'nama_dusun' => $request->namaPT,
         ]);
         if ($perusahaan) {
             alert()->success('Success!', 'Data Berhasil Diubah!')->autoclose(3500);
