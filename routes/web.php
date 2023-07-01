@@ -77,3 +77,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', 'DashboardCon
 Route::get('/tes', function () {
     return view('Batch/export/batch');
 });
+
+// Route Program Tahunan
+Route::resource('program', programtahunanController::class);
+Route::get('/get/programtahunan', 'programtahunanController@index')->name('program');
+Route::match(['get', 'post'], '/detail/program/{id}', 'programtahunanController@show')->name('showprogram');
+
+// Route Bansos
+Route::resource('bansos', BansosController::class);
+Route::get('/get/bansos', 'programtahunanController@index')->name('bansos');
+Route::post('/bansos.import', 'BansosController@importExcel')->name('importBansos');

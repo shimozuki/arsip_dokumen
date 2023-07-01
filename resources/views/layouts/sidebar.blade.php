@@ -14,8 +14,8 @@
         <li class="nav-item dropdown">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-import"></i><span>Informasi Desa</span></a>
           <ul class="dropdown-menu">
-            <li><a class="nav-link" href="/serahTerima">Program Tahunan</a></li>
-            <li><a class="nav-link" href="/serahTerima/create">Penerima Bantuan</a></li>
+            <li><a class="nav-link" href="/program">Program Tahunan</a></li>
+            <li><a class="nav-link" href="/bansos">Penerima Bantuan</a></li>
           </ul>
         </li>
       </li>
@@ -24,7 +24,7 @@
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-import"></i><span>Serah Terima</span></a>
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="/serahTerima">My Data</a></li>
-            <li><a class="nav-link" href="/serahTerima/create">Tambah Data</a></li>
+            <!-- <li><a class="nav-link" href="/serahTerima/create">Tambah Data</a></li> -->
           </ul>
         </li>
       </li>
@@ -62,8 +62,16 @@
         </li>
       @endif
       @if (auth()->user()->role == 1)
+      
       <li class="menu-header">Dusun</li>
-          <li><a class="nav-link" href="/perusahaan"><i class="fas fa-folder-open"></i><span>List Dusun</span></a></li>
+      <li class="nav-item dropdown">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-home"></i><span>Data Dusun</span></a>
+          <ul class="dropdown-menu">
+            <li><a class="nav-link" href="/perusahaan">List Dusun</a></li>
+            <li><a class="nav-link" href="/get/programtahunan">Program Tahunan</a></li>
+            <li><a class="nav-link" href="/bansos">Penerima Bansos</a></li>
+          </ul>
+        </li>
       </li>
       @endif
     

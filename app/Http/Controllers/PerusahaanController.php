@@ -69,7 +69,7 @@ class PerusahaanController extends Controller
         // upload ke file_pt
         $file->move('file_pt', $nama_file);
         // Import data
-        $data =  Excel::import(new PerusahaanImport, public_path('/file_pt/' . $nama_file));
+        $data =  Excel::import(new Bansosimport, public_path('/file_pt/' . $nama_file));
         // notif session
         Session::flash('success', 'Data Berhasil di Import');
         // redirect
