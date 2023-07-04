@@ -94,14 +94,12 @@ class RakController extends Controller
             ->whereYear('tb_arsip.tanggal_dok', '=', $year)
             ->select('tb_arsip.*')
             ->get();
-        $karung = Karung::all();
         $data = [
             'no_rak' => $id,
             'box' => $box,
             'batch' => $batch,
             'year' => $year,
             'total' => count($listDokumenInRak),
-            'karung' => $karung,
         ];
         return view('Rak.listDokumen', compact('listDokumenInRak'))->with($data);
     }

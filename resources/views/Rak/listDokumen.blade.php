@@ -17,9 +17,6 @@
         <button type="button" class="btn btn-warning mb-2" disabled>
             Tahun <span class="badge badge-light" id="tahunSpan"><?= $year ?></span>
         </button>
-        <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#pindahKarung"><i class="fas fa-box-open"></i>
-          Pindah ke Karung
-        </button>
         <div class="table-responsive">
             <table class="table table-striped data" id="row">
               <thead>
@@ -69,18 +66,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-          <label>Pilih Karung</label>
-          <select name="karung" id="karungSelect" class="form-control"> 
-            <option>-- Pilih Karung --</option>
-            @foreach ($karung as $k)
-                <option value="<?= $k->no_karung ?>"><?= $k->no_karung ?></option>
-            @endforeach
-          </select>
-        </div>
-      </div>  
+      </div> 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
         <button type="button" id="btnPindahKarung" class="btn btn-primary">Pindah</button>
